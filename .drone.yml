@@ -1,0 +1,31 @@
+pipeline:
+    clone:
+        image: plugins/git
+        tags: true # publishのコマンドがちゃんと動作するようにtagもfetchする
+    test:
+        image: node:7-alpine
+        commands:
+            - apk --update add git
+            - npm i --quiet # 公式のnodeイメージはログレベルがinfoでうるさいため https://github.com/nodejs/docker-node/blob/90d5e3df903b830d039d3fe8f30e3a62395db37e/7.5/alpine/Dockerfile#L3
+            - npm t
+    build:
+        image: node:7-alpine
+        commands:
+            - npm run build
+    # masterマージされた時に自動バージョンアップし、publishする
+    # see: https://github.com/xtity/next-version
+    # see: https://github.com/xtity/better-publish
+    # publish:
+    #     image: node:7-alpine
+    #     commands:
+    #         - apk --update add git
+    #         - npm i --quiet
+    #         - |
+    #             $(npm bin)/better-publish "$($(npm bin)/next-version)" \
+    #               --registry https://npm.registry.xtity.co.jp/ \
+    #               --registry-user ${NPM_REIGSTRY_CI_USER_NAME} \
+    #               --registry-password ${NPM_REIGSTRY_CI_USER_PASSWORD} \
+    #               --registry-email dummy@xtity.co.jp
+    #     when:
+    #         event: push
+    #         branch: master
