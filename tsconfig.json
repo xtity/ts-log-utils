@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "build",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

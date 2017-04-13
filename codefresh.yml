@@ -1,0 +1,26 @@
+# version: '1.0'
+# steps:
+#   build_image:
+#     type: build
+#     description: Building the image...
+#     image-name: xtity/ts-log-utils
+#     tag: develop # ${{CF_BRANCH}}
+
+#   perform_tests:
+#     image_name: node:latest
+#     working_directory: ${{main_clone}}
+#     description: Performing unit tests...
+#     commands:
+#       - npm install
+#       - npm test
+
+version: '1.0'
+
+steps:
+
+     unit_tests:
+          title: Unit Tests
+          image: node:latest
+          commands:
+            - npm install --silence
+            - npm test
