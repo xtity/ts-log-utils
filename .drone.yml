@@ -1,0 +1,13 @@
+pipeline:
+    clone:
+        image: plugins/git
+        skip_verify: true
+        tags: true
+    build:
+        image: node:7-alpine
+        commands:
+            - npm run build
+    test:
+        image: node:7-alpine
+        commands:
+            - npm test
