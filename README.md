@@ -32,7 +32,7 @@ log4js:
 ### install
 
 ``` bash
-npm install --save-dev @xtity/ts-log-utils
+npm install --save-dev ts-log-utils
 ```
 
 ### build
@@ -58,7 +58,7 @@ open ./coverage/ts-report/index.html
 ### example
 
 ``` typescript
-import { LogUtils } from "@xtity/ts-log-utils";
+import { LogUtils } from "ts-log-utils";
 
 LogUtil.debug("Log me!");
 ```
