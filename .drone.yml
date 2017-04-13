@@ -30,13 +30,3 @@ pipeline:
     #     when:
     #         event: push
     #         branch: master
-
-
-
-
-
-
-
-
-
-

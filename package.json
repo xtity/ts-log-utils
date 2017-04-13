@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "name": "@xtity/ts-log-utils",
   "version": "1.0.0",
   "description": "ts-log-utils",

@@ -1,5 +1,5 @@
 # ts-log-utils
-logを使うためのユーティリティ。
+Typescript Log Utilities
 
 
 ## Requirements
@@ -8,12 +8,12 @@ logを使うためのユーティリティ。
 
 ## Configuration
 
-### 設定ファイル
+### configuration file
 ${project root}/config/default.yml
 
-※ 設定ファイル名等は、 [config](https://www.npmjs.com/package/config) に準拠。
+See [config](https://www.npmjs.com/package/config)
 
-### 設定例
+### example
 ``` yml
 log4js:
   appenders:
@@ -29,25 +29,25 @@ log4js:
 
 ## Usage
 
-### インストール
+### install
 
 ``` bash
 npm install --save-dev @xtity/ts-log-utils
 ```
 
-### ビルド
+### build
 
 ``` bash
 npm run build
 ```
 
-### テスト
+### test
 
 ``` bash
 npm run test
 ```
 
-### カバレッジ
+### coverage
 
 ``` bash
 npm run coverage
@@ -55,7 +55,7 @@ open ./coverage/ts-report/index.html
 ```
 
 
-### 使用例
+### example
 
 ``` typescript
 import { LogUtils } from "@xtity/ts-log-utils";

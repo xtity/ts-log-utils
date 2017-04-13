@@ -3,7 +3,7 @@ import * as log4js from "log4js";
 import LogUtil from "./LogUtil";
 
 /**
- * バッチのログをよろしくやってくれるさん
+ * BatchLogUtil
  */
 export default class BatchLogUtil extends LogUtil {
     public static init() {

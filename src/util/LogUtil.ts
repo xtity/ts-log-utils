@@ -2,7 +2,7 @@ import * as config from "config";
 import * as log4js from "log4js";
 
 /**
- * ログをよろしくやってくれるさん
+ * LogUtil
  */
 export default class LogUtil {
 
