@@ -1,0 +1,10 @@
+log4js:
+  appenders:
+  - category: batch
+    type: dateFile
+    filename: "/tmp/batch.log"
+    pattern: "-yyyy-MM-dd"
+    backups: 3
+  - type: console
+  levels:
+    batch: ALL
