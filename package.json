@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "ts-log-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ts-log-utils",
   "main": "build/src/index",
   "typings": "build/src/index",
@@ -10,9 +10,9 @@
     "build/src/**/*.d.ts"
   ],
   "scripts": {
-    "build": "npm run clean && mkdir -p build && ./node_modules/.bin/tsc -p .",
+    "build": "npm run clean && ./node_modules/.bin/tsc -p .",
     "test": "./node_modules/mocha/bin/mocha --compilers ts:espower-typescript/guess ./test/**/*.ts && npm run lint && npm run coverage",
-    "clean": "rm -rf build",
+    "clean": "rm -rf build && mkdir build",
     "pretest": "npm run build",
     "prepublish": "npm run build",
     "lint": "./node_modules/.bin/tslint -c ./tslint.json src/**/*.ts test/**/*.ts",

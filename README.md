@@ -1,5 +1,8 @@
 # ts-log-utils
-Typescript Log Utilities
+
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=xtity&repoName=ts-log-utils&branch=master&pipelineName=ts-log-utils&accountName=xtity&type=cf-1)]( https://g.codefresh.io/repositories/xtity/ts-log-utils/builds?filter=trigger:build;branch:master;service:58ef16884fc3e8010085e7a3~ts-log-utils)
+
+TypeScript Log Utilities
 
 
 ## Requirements
@@ -27,6 +30,7 @@ log4js:
     batch: ALL
 ```
 
+
 ## Usage
 
 ### install
@@ -53,7 +57,6 @@ npm run test
 npm run coverage
 open ./coverage/ts-report/index.html
 ```
-
 
 ### example
 

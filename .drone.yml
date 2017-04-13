@@ -1,13 +1,14 @@
 pipeline:
     clone:
         image: plugins/git
-        skip_verify: true
         tags: true
+    test:
+        image: node:7-alpine
+        commands:
+            - apk --update add git
+            - npm i --quiet
+            - npm t
     build:
         image: node:7-alpine
         commands:
             - npm run build
-    test:
-        image: node:7-alpine
-        commands:
-            - npm test
