@@ -20,14 +20,22 @@ See [config](https://www.npmjs.com/package/config)
 ``` yml
 log4js:
   appenders:
-  - category: batch
-    type: dateFile
-    filename: "/tmp/batch.log"
-    pattern: "-yyyy-MM-dd"
-    backups: 3
-  - type: console
-  levels:
-    batch: ALL
+    out:
+      type: console
+    batch:
+      type: dateFile
+      filename: "/tmp/batch.log"
+      pattern: "-yyyy-MM-dd"
+      backups: 3
+  categories:
+    default:
+      appenders:
+        - out
+      level: ALL
+    batch:
+      appenders:
+        - batch
+      level: ALL
 ```
 
 
@@ -58,10 +66,31 @@ npm run coverage
 open ./coverage/ts-report/index.html
 ```
 
-### example
+
+## sample
+
+### code
 
 ``` typescript
 import { LogUtils } from "ts-log-utils";
 
 LogUtil.debug("Log me!");
+```
+
+### webpack.config.production.js
+
+``` javascript
+const uglifyEsPlugin = require("uglify-es-webpack-plugin");
+
+const config = {
+    plugins: [
+        new uglifyEsPlugin({
+            compress: {
+                drop_console: true
+            }
+        })
+    ]
+}
+
+module.exports = config;
 ```
