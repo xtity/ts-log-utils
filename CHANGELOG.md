@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 2.0.0
+* Log4js version up
+* Webpack compile adjusted
+
 ## 1.0.2
 * Modified CI configuration
 

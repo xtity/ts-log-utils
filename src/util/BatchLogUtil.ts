@@ -1,5 +1,3 @@
-import * as config from "config";
-import * as log4js from "log4js";
 import LogUtil from "./LogUtil";
 
 /**
@@ -7,8 +5,11 @@ import LogUtil from "./LogUtil";
  */
 export default class BatchLogUtil extends LogUtil {
     public static init() {
-        log4js.configure(<any>config.get("log4js"));
-        this.LOGGER = log4js.getLogger("batch");
+        if (typeof (window) === "undefined") { // for server side
+            // tslint:disable-next-line:no-eval
+            const log4js = eval("require")("log4js");
+            this.LOGGER = log4js.getLogger("batch");
+        }
     }
 }
 

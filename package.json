@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "ts-log-utils",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "ts-log-utils",
   "main": "build/src/index",
   "typings": "build/src/index",
@@ -23,17 +23,17 @@
     "type": "git",
     "url": "git+https://github.com/xtity/ts-log-utils.git"
   },
-  "author": "",
-  "license": "",
+  "author": "xtity",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xtity/ts-log-utils/issues"
   },
   "homepage": "https://github.com/xtity/ts-log-utils#readme",
   "dependencies": {
-    "config": "^1.25.1",
-    "log4js": "^1.1.1",
     "@types/config": "0.0.32",
-    "@types/log4js": "0.0.32"
+    "@types/log4js": "0.0.33",
+    "config": "^1.25.1",
+    "log4js": "^2.3.3"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.39",
