@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "ts-log-utils",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "ts-log-utils",
   "main": "build/src/index",
   "typings": "build/src/index",
