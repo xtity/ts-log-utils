@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 2.1.0
+* Change compile target version to es5
+
 ## 2.0.0
 * Log4js version up
 * Webpack compile adjusted
