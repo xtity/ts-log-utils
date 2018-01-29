@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 2.2.0
+* Change tsconfig sourceMap to false
+
 ## 2.1.0
 * Change compile target version to es5
 
