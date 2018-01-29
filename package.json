@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "ts-log-utils",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "ts-log-utils",
   "main": "build/src/index",
   "typings": "build/src/index",
@@ -11,10 +11,11 @@
   ],
   "scripts": {
     "build": "npm run clean && ./node_modules/.bin/tsc -p .",
+    "build:prod": "NODE_ENV=production npm run clean && ./node_modules/.bin/tsc -p tsconfig.production.json",
     "test": "./node_modules/mocha/bin/mocha --compilers ts:espower-typescript/guess ./test/**/*.ts && npm run lint && npm run coverage",
     "clean": "rm -rf build && mkdir build",
     "pretest": "npm run build",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build:prod",
     "lint": "./node_modules/.bin/tslint -c ./tslint.json src/**/*.ts test/**/*.ts",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive build",
     "posttest": "./node_modules/.bin/remap-istanbul -i ./coverage/coverage.json -o ./coverage/ts-report -t html"
